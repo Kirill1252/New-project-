@@ -8,16 +8,16 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser
-    search_fields = ('username', 'email', 'mobile')
+    search_fields = ('pk', 'username', 'email', 'mobile')
     prepopulated_fields = {'username': ('email',)}
-    list_display = ('username', 'email', 'mobile')
+    list_display = ('pk', 'username', 'email', 'mobile')
     add_fieldsets = (
         *UserAdmin.add_fieldsets,
         ('Custom fields', {
             'fields': (
                 'slug',
                 'instagram',
-                'fecebook',
+                'facebook',
                 'avatar',
                 'mobile'
             )
@@ -29,7 +29,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': (
                 'slug',
                 'instagram',
-                'fecebook',
+                'facebook',
                 'avatar',
                 'mobile'
             )

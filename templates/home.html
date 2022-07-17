@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+<body>
+{% block content %}
+{% if request.user.is_authenticated %}
+<h1>Welcome to my site {{ user.username }}</h1>
+{% else %}
+<h1> Welcome to my site!</h1>
+{% endif %}
+{% endblock %}
+</body>
