@@ -1,5 +1,5 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from django import forms
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 
 from .models import CustomUser
 
@@ -17,15 +17,15 @@ class CustomUserChangeForm(UserChangeForm):
 
 
 class RegisterUserForm(CustomUserCreationForm):
-    username = forms.EmailField(label='Email address',)
-    password1 = forms.CharField(label='Password ',)
-    password2 = forms.CharField(label='Password confirmation ',)
-    mobile = forms.IntegerField(label='Mobile',)
-    first_name = forms.CharField(label='First Name',)
-    last_name = forms.CharField(label='Last Name',)
-    avatar = forms.CharField(label='Avatar',)
-    instagram = forms.CharField(label='Instagram',)
-    facebook = forms.CharField(label='Facebook',)
+    username = forms.EmailField(label='Email address', )
+    password1 = forms.CharField(label='Password ', )
+    password2 = forms.CharField(label='Password confirmation ', )
+    mobile = forms.IntegerField(label='Mobile', )
+    first_name = forms.CharField(label='First Name', )
+    last_name = forms.CharField(label='Last Name', )
+    avatar = forms.CharField(label='Avatar', )
+    instagram = forms.CharField(label='Instagram', )
+    facebook = forms.CharField(label='Facebook', )
 
     class Meta:
         model = CustomUser
@@ -38,12 +38,12 @@ class RegisterUserForm(CustomUserCreationForm):
 
 
 class UpdateUserData(CustomUserChangeForm):
-    mobile = forms.IntegerField(label='Mobile',)
-    first_name = forms.CharField(label='First Name',)
-    last_name = forms.CharField(label='Last Name',)
-    avatar = forms.CharField(label='Avatar',)
-    instagram = forms.CharField(label='Instagram',)
-    facebook = forms.CharField(label='Facebook',)
+    mobile = forms.IntegerField(label='Mobile', )
+    first_name = forms.CharField(label='First Name', )
+    last_name = forms.CharField(label='Last Name', )
+    avatar = forms.CharField(label='Avatar', )
+    instagram = forms.CharField(label='Instagram', )
+    facebook = forms.CharField(label='Facebook', )
 
     class Meta:
         model = CustomUser
@@ -55,5 +55,5 @@ class UpdateUserData(CustomUserChangeForm):
 
 
 class LoginForm(AuthenticationForm):
-    username = forms.CharField(label='Email address',)
-    password = forms.CharField(label='Password',)
+    username = forms.CharField(label='Email address', )
+    password = forms.CharField(label='Password', )

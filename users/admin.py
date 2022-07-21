@@ -19,7 +19,8 @@ class CustomUserAdmin(UserAdmin):
                 'instagram',
                 'facebook',
                 'avatar',
-                'mobile'
+                'mobile',
+                'email'
             )
         })
     )

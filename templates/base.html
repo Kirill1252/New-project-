@@ -7,7 +7,21 @@
     <title>{{ title }}</title>
 </head>
 <body>
-
+<!--nav-->
+<nav>
+    <lu>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Blog</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'user:logout' %}">Logout</a></li>
+        <li><a href="{% url 'user:profile' user.slug %}">Profile|{{ user.slug }}</a></li>
+        {% else %}
+        <li><a href="{% url 'user:login' %}">Login</a></li>
+        {% endif %}
+    </lu>
+</nav>
+<!-- end nav -->
 {% block content %}
 {% endblock %}
 </body>
